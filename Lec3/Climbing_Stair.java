@@ -6,6 +6,7 @@ public class Climbing_Stair {
 		// TODO Auto-generated method stub
 		int n = 4;
 		System.out.println(noways(0, n));
+		Print_path(0, n, "");
 
 	}
 
@@ -26,6 +27,29 @@ public class Climbing_Stair {
 			
 		}
 		return ans;
+
+	}
+
+	
+	
+	public static void Print_path(int curr, int dis,String ans) {
+		if(curr==dis) {
+			System.out.println(ans);
+			return ;
+		}
+		if(curr>dis) {
+			return ;
+		}
+
+//		int Steps1 = noways(curr + 1, dis);
+//		int Steps2 = noways(curr + 2, dis);
+//		int Steps3 = noways(curr + 3, dis);
+	
+		for (int step = 1; step <=3; step++) {
+			Print_path(curr+step, dis,ans+step);
+			
+		}
+	
 
 	}
 
