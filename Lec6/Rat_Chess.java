@@ -13,15 +13,19 @@ public class Rat_Chess {
 		for (int i = 0; i < maze.length; i++) {
 			
 			String str = sc.next();
-			for (int j = 0; j < str.length(); j++) {
-				maze[i][j]=str.charAt(j);
-				
-			}
+
 			
 		}
 		
 		
+		
 
+	}
+	
+	public static void RatinMAze(char [][]maze, boolean[][] board, int cr, int cc) {
+		
+		
+		
 	}
 
 }

@@ -24,11 +24,13 @@ public class Normal_maze {
 
 		int[] r = { 0, 1, 0, -1 };
 		int[] c = { 1, 0, -1, 0 };
+		
           maze[cr][cc]=true;//visted 
 		for (int i = 0; i < c.length; i++) {
 			maze_path2(maze, cr + r[i], cc + c[i]);
 
 		}
+		
 		 maze[cr][cc]=false;
 		 
 
