@@ -1,6 +1,5 @@
-package lec25;
+package Lec25;
 
-import lec25.Is_Bst.TreeNode;
 
 public class Validate_Binary_Search_Tree_Optimized {
 	public class TreeNode {

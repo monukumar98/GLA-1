@@ -1,6 +1,5 @@
-package lec25;
+package Lec25;
 
-import lec25.Is_Bst.TreeNode;
 
 public class Maximum_Sum_BST_in_BT {
 	public class TreeNode {
