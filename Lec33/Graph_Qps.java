@@ -124,24 +124,30 @@ public class Graph_Qps {
 	public void BFT() {
 		LinkedList<Integer> queue = new LinkedList<>();
 		HashSet<Integer> visited = new HashSet<>();
-		queue.add(1);
-		while (!queue.isEmpty()) {
-			// remove
-			int rv = queue.remove();
-			// Ignore
-			if (visited.contains(rv)) {
+		for (int src : map.keySet()) {
+			if (visited.contains(src)) {
 				continue;
 			}
-
-			// visited Mark
-			visited.add(rv);
-
-			System.out.print(rv+" ");
-			// add nbrs
-			for (int key : map.get(rv).keySet()) {
-				if (visited.contains(key) == false) {
-					queue.add(key);
+			queue.add(src);
+			while (!queue.isEmpty()) {
+				// remove
+				int rv = queue.remove();
+				// Ignore
+				if (visited.contains(rv)) {
+					continue;
 				}
+
+				// visited Mark
+				visited.add(rv);
+
+				System.out.print(rv + " ");
+				// add nbrs
+				for (int key : map.get(rv).keySet()) {
+					if (visited.contains(key) == false) {
+						queue.add(key);
+					}
+				}
+
 			}
 
 		}
